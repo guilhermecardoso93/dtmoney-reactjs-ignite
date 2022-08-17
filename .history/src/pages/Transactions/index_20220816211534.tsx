@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
+import { priceFormatter } from "../../utils/formatter";
 import { SearchForm } from "./components/SearchForm";
 import {
   PriceHighLight,
@@ -32,7 +32,7 @@ export function Transactions() {
                       </PriceHighLight>
                     </td>
                     <td>{transaction.category}</td>
-                    <td>{dateFormatter.format( new Date(transaction.createdAt))}</td>
+                    <td>{transaction.createdAt}</td>
                   </tr>
                 );
               })}

@@ -22,12 +22,11 @@ const newTransactionFormSchema = z.object({
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>;
 
 export function NewTransactionModal() {
-  const { register, handleSubmit, formState: { isSubmitting } } = useForm<NewTransactionFormInputs>({
+  const { register, handleSubmit } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
   });
 
-  async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
-    await new Promise(resolve => setTimeout(resolve, 2000))
+  function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     console.log(data);
   }
 
@@ -46,7 +45,7 @@ export function NewTransactionModal() {
             type="text"
             placeholder="Descrição"
             required
-            //{...register("description")}
+            {...register("description")}
           />
           <input
             type="number"
@@ -72,7 +71,7 @@ export function NewTransactionModal() {
             </TransactionTypeButton>
           </TransactionType>
 
-          <button type="submit" disabled={isSubmitting}>Cadastrar</button>
+          <button type="submit">Cadastrar</button>
         </form>
       </Content>
     </Dialog.Portal>

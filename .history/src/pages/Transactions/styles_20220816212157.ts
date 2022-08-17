@@ -34,6 +34,7 @@ interface PriceHighLightProps {
 }
 
 export const PriceHighLight = styled.span<PriceHighLightProps>`
+align-items: flex-start;
   color: ${(props) =>
   props.variant === "income"
     ? props.theme["green-300"]

@@ -46,7 +46,7 @@ export function NewTransactionModal() {
             type="text"
             placeholder="Descrição"
             required
-            //{...register("description")}
+            {...register("description")}
           />
           <input
             type="number"
