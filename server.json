@@ -1,5 +1,6 @@
 {
-  "transactions": [{
+  "transactions": [
+    {
       "id": 1,
       "description": "Desenvolvimento de site",
       "type": "income",
@@ -30,7 +31,22 @@
       "category": "Compras",
       "price": 69.99,
       "createdAt": "2022-08-05T23:08:55.392Z"
+    },
+    {
+      "description": "App",
+      "type": "income",
+      "price": 500,
+      "category": "Internet",
+      "createdAt": "2022-08-18T00:17:19.907Z",
+      "id": 5
+    },
+    {
+      "description": "Mercado ",
+      "type": "outcome",
+      "price": 500,
+      "category": "Mercado",
+      "createdAt": "2022-08-18T00:32:26.433Z",
+      "id": 6
     }
-
   ]
 }

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "npx eslint src --ext .tsx,.ts",
-    "lint-fix":"npx eslint src --ext .tsx,.ts --fix",
+    "lint-fix":"npx eslint src --ext .tsx, .ts --fix",
     "preview": "vite preview",
     "dev:server": "json-server server.json -w -d 500"
   },
